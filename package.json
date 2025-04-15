@@ -24,6 +24,7 @@
     "@jest/globals": "^29.7.0",
     "@types/express": "^5.0.1",
     "@types/jest": "^29.5.14",
+    "@types/morgan": "^1.9.9",
     "eslint": "^9.24.0",
     "globals": "^16.0.0",
     "husky": "^9.1.7",
@@ -39,6 +40,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "express": "^5.1.0",
+    "morgan": "^1.10.0",
     "uuid": "^11.1.0"
   }
 }
