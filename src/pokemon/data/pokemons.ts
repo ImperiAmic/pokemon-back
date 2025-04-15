@@ -29,7 +29,7 @@ const raichu = new Pokemon(
 const zapdos = new Pokemon(
   "Zapdos",
   145,
-  "https://i.ibb.co/wZX9RV6x/raichu.webp",
+  "https://i.ibb.co/h1hCzdDQ/zapdos.webp",
 );
 
 export const pokemons = [gengar, gyarados, meowth, mew, raichu, zapdos];
