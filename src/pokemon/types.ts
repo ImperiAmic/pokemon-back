@@ -1,4 +1,4 @@
-export interface PokemonStructure {
+interface PokemonStructure {
   name: string;
   pokedexPosition: number;
   imageUrl: string;
