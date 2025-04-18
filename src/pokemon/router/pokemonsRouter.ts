@@ -8,4 +8,6 @@ const pokemonController = new PokemonController(pokemons);
 
 pokemonsRouter.get("/", pokemonController.getPokemons);
 
+pokemonsRouter.post("/", pokemonController.addPokemon);
+
 export default pokemonsRouter;

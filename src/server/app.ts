@@ -17,10 +17,11 @@ app.use(
     credentials: true,
   }),
 );
+app.use(express.json());
 
 app.get("/", checkHealthStatus);
 
-app.use("/pokemons", pokemonsRouter);
+app.use("/pokemon", pokemonsRouter);
 
 app.use(handlerEndpointNotFound);
 
