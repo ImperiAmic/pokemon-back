@@ -9,8 +9,8 @@ const config: Config = {
   collectCoverageFrom: [
     "**/*.ts",
     "!index.ts",
-    "!monument/data/monuments.ts",
-    "!monument/router/monumentsRouter.ts",
+    "!pokemon/data/pokemons.ts",
+    "!pokemon/router/pokemonsRouter.ts",
     "!server/app.ts",
     "!server/startServer.ts",
   ],
