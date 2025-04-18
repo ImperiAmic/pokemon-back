@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { fixturePokemons, negri, pikachu } from "../../fixtures.js";
+import { fixturePokemons, mewtwo, pikachu } from "../../fixtures.js";
 import PokemonController from "../PokemonController.js";
 
 describe("Given the getPokemon method from PokemonController class", () => {
@@ -26,8 +26,8 @@ describe("Given the getPokemon method from PokemonController class", () => {
       expect(res.status).toHaveBeenCalledWith(expectedStatus);
     });
 
-    test("Then it should call the received response's method json with Negri and Pikachu pokémon", () => {
-      const expectedMessage = { pokemons: [negri, pikachu] };
+    test("Then it should call the received response's method json with Mewtwo and Pikachu pokémon", () => {
+      const expectedMessage = { pokemons: [mewtwo, pikachu] };
 
       pokemonController.getPokemons(req, res as Response);
 
