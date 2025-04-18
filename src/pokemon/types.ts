@@ -1,8 +1,8 @@
 interface PokemonStructure {
-  name: string;
-  pokedexPosition: number;
-  imageUrl: string;
   id: string;
+  name: string;
+  imageUrl: string;
+  pokedexPosition: number;
   isCaptured: boolean;
 }
 
