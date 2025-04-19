@@ -11,7 +11,7 @@ class PokemonController implements PokemonControllerStructure {
   };
 
   addPokemon = (req: Request, res: Response): void => {
-    const pokemon = req.body as PokemonStructure;
+    const pokemon: PokemonStructure = req.body;
 
     const newPokemon = new Pokemon(
       pokemon.name,

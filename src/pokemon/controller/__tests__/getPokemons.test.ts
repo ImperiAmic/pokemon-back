@@ -5,10 +5,10 @@ import PokemonController from "../PokemonController.js";
 describe("Given the getPokemon method from PokemonController class", () => {
   describe("When it receives a request and a response", () => {
     const req = {} as Request;
-    const res = {
+    const res: Pick<Response, "status" | "json"> = {
       status: jest.fn().mockReturnThis(),
       json: jest.fn(),
-    } as Pick<Response, "status" | "json">;
+    };
 
     let pokemonController: PokemonController;
 

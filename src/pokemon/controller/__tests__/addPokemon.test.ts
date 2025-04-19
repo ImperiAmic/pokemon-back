@@ -4,10 +4,10 @@ import { fixturePokemons } from "../../fixtures.js";
 import Pokemon from "../../Pokemon.js";
 
 describe("Given the addPokemon method from PokemonController class", () => {
-  const res = {
+  const res: Pick<Response, "status" | "json"> = {
     status: jest.fn().mockReturnThis(),
     json: jest.fn(),
-  } as Pick<Response, "status" | "json">;
+  };
 
   let copyOfFixturePokemons: Pokemon[];
   let pokemonController: PokemonController;
@@ -20,14 +20,14 @@ describe("Given the addPokemon method from PokemonController class", () => {
   });
 
   describe("When it receives a request with Pokémon Snorlax", () => {
-    const req = {
+    const req: Pick<Request, "body"> = {
       body: {
         name: "Snorlax",
         pokedexPosition: 143,
         imageUrl:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/143.svg",
       },
-    } as Pick<Request, "body">;
+    };
 
     test("Then it should call the received response's method with 201", () => {
       const expectedStatusCode = 201;
@@ -58,14 +58,14 @@ describe("Given the addPokemon method from PokemonController class", () => {
   });
 
   describe("When it receives a request with Pokémon Pikachu", () => {
-    const req = {
+    const req: Pick<Request, "body"> = {
       body: {
         name: "Pikachu",
         pokedexPosition: 25,
         imageUrl:
           "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/025.png",
       },
-    } as Pick<Request, "body">;
+    };
 
     test("Then it should call the received response's method status with 409", () => {
       const expectedStatusCode = 409;

@@ -31,7 +31,7 @@ describe("Given the Negri pokémon", () => {
       expect(negri.id).not.toBe("");
     });
 
-    test("Then it should be captured", () => {
+    test("Then it should not be captured", () => {
       expect(negri.isCaptured).toBe(false);
     });
   });
