@@ -6,6 +6,10 @@ describe("Given the Negri pokémon", () => {
       "Negri",
       6,
       "https://images.squarespace-cdn.com/content/v1/671237937161265de716c036/359c414e-00b5-4916-9fe9-0cbde091fdfd/negri-gat-sabi.JPG",
+      {
+        types: ["lazy", "cat"],
+        abilities: ["meow"],
+      },
     );
 
     test("Then it should have 'Negri' as a name", () => {

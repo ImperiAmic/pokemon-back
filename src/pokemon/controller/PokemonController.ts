@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import PokemonStructure from "../types.js";
+import { PokemonStructure } from "../types.js";
 import PokemonControllerStructure from "./types.js";
 import Pokemon from "../Pokemon.js";
 
@@ -17,6 +17,10 @@ class PokemonController implements PokemonControllerStructure {
       pokemon.name,
       pokemon.pokedexPosition,
       pokemon.imageUrl,
+      {
+        types: pokemon.types,
+        abilities: pokemon.abilities,
+      },
     );
 
     const isNewPokemonAdded = this.pokemons.some(
