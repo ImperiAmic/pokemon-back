@@ -1,9 +1,14 @@
-interface PokemonStructure {
+export interface PokemonStructure {
   id: string;
   name: string;
   imageUrl: string;
   pokedexPosition: number;
   isCaptured: boolean;
+  types: string[];
+  abilities: string[];
 }
 
-export default PokemonStructure;
+export interface PokemonInfo {
+  types: string[];
+  abilities: string[];
+}
