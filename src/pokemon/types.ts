@@ -12,3 +12,5 @@ export interface PokemonInfo {
   types: string[];
   abilities: string[];
 }
+
+export type PokemonFormData = Omit<PokemonStructure, "id" | "isCaptured">;

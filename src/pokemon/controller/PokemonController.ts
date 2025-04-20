@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { PokemonStructure } from "../types.js";
+import { PokemonFormData, PokemonStructure } from "../types.js";
 import PokemonControllerStructure from "./types.js";
 import Pokemon from "../Pokemon.js";
 
@@ -11,7 +11,7 @@ class PokemonController implements PokemonControllerStructure {
   };
 
   addPokemon = (req: Request, res: Response): void => {
-    const pokemon: PokemonStructure = req.body;
+    const pokemon = req.body as PokemonFormData;
 
     const newPokemon = new Pokemon(
       pokemon.name,
