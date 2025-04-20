@@ -26,6 +26,8 @@ describe("Given the addPokemon method from PokemonController class", () => {
         pokedexPosition: 143,
         imageUrl:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/143.svg",
+        types: ["lazy"],
+        abilities: ["sleep in the middle of the fucking path"],
       },
     };
 
@@ -43,6 +45,8 @@ describe("Given the addPokemon method from PokemonController class", () => {
         pokedexPosition: 143,
         imageUrl:
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/143.svg",
+        types: ["lazy"],
+        abilities: ["sleep in the middle of the fucking path"],
       };
 
       pokemonController.addPokemon(req as Request, res as Response);
@@ -52,6 +56,8 @@ describe("Given the addPokemon method from PokemonController class", () => {
           name: expectedMessage.name,
           pokedexPosition: expectedMessage.pokedexPosition,
           imageUrl: expectedMessage.imageUrl,
+          types: expectedMessage.types,
+          abilities: expectedMessage.abilities,
         }),
       );
     });

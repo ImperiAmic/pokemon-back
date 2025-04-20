@@ -5,8 +5,8 @@ export const mewtwo = new Pokemon(
   150,
   "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/150.svg",
   {
-    types: ["lazy", "cat"],
-    abilities: ["meow"],
+    types: ["chetado", "psychic"],
+    abilities: ["fuck around"],
   },
 );
 
