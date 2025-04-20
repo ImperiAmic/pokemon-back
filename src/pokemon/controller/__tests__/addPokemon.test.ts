@@ -40,7 +40,7 @@ describe("Given the addPokemon method from PokemonController class", () => {
     });
 
     test("Then it should call the received response's method json with Pokémon Snorlax", () => {
-      const expectedMessage = {
+      const expectedPokemon = {
         name: "Snorlax",
         pokedexPosition: 143,
         imageUrl:
@@ -53,11 +53,11 @@ describe("Given the addPokemon method from PokemonController class", () => {
 
       expect(res.json).toHaveBeenCalledWith(
         expect.objectContaining({
-          name: expectedMessage.name,
-          pokedexPosition: expectedMessage.pokedexPosition,
-          imageUrl: expectedMessage.imageUrl,
-          types: expectedMessage.types,
-          abilities: expectedMessage.abilities,
+          name: expectedPokemon.name,
+          pokedexPosition: expectedPokemon.pokedexPosition,
+          imageUrl: expectedPokemon.imageUrl,
+          types: expectedPokemon.types,
+          abilities: expectedPokemon.abilities,
         }),
       );
     });
