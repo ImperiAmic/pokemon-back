@@ -62,26 +62,48 @@ class PokemonController implements PokemonControllerStructure {
     res.status(200).json(pokemonToDelete);
   };
 
-  getPokemon = (req: Request, res: Response): void => {
+  addPokemonToPokeball = (req: Request, res: Response): void => {
     const pokemonId = req.params.pokemonId;
 
-    const pokemonToSave = this.pokemons.find(
+    const pokemonToAddToPokeball = this.pokemons.find(
       (pokemon) => pokemon.id === pokemonId,
     );
 
-    if (!pokemonToSave) {
+    if (!pokemonToAddToPokeball) {
       res.status(404).json({ error: "Pokémon not found" });
       return;
     }
 
-    if (pokemonToSave.isCaptured) {
+    if (pokemonToAddToPokeball.isCaptured) {
       res.status(409).json({ error: "Pokémon already in Pokéball" });
       return;
     }
 
-    pokemonToSave.isCaptured = true;
+    pokemonToAddToPokeball.isCaptured = true;
 
-    res.status(200).json(pokemonToSave);
+    res.status(200).json(pokemonToAddToPokeball);
+  };
+
+  removePokemonFromPokeball = (req: Request, res: Response): void => {
+    const pokemonId = req.params.pokemonId;
+
+    const pokemonToRemoveFromPokeball = this.pokemons.find(
+      (pokemon) => pokemon.id === pokemonId,
+    );
+
+    if (!pokemonToRemoveFromPokeball) {
+      res.status(404).json({ error: "Pokémon not found" });
+      return;
+    }
+
+    if (!pokemonToRemoveFromPokeball.isCaptured) {
+      res.status(409).json({ error: "Pokémon already outside Pokéball" });
+      return;
+    }
+
+    pokemonToRemoveFromPokeball.isCaptured = false;
+
+    res.status(200).json(pokemonToRemoveFromPokeball);
   };
 }
 
