@@ -10,4 +10,6 @@ pokemonsRouter.get("/", pokemonController.getPokemons);
 
 pokemonsRouter.post("/", pokemonController.addPokemon);
 
+pokemonsRouter.delete("/:pokemonId", pokemonController.deletePokemon);
+
 export default pokemonsRouter;
