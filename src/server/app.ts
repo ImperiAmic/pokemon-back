@@ -4,8 +4,6 @@ import cors from "cors";
 import checkHealthStatus from "./middleware/checkHealthStatus.js";
 import handlerEndpointNotFound from "./middleware/handlerEndpointNotFound.js";
 import pokemonsRouter from "../pokemon/router/pokemonsRouter.js";
-import PokemonController from "../pokemon/controller/PokemonController.js";
-import { pokemons } from "../pokemon/data/pokemons.js";
 
 const app = express();
 
@@ -24,10 +22,6 @@ app.use(express.json());
 app.get("/", checkHealthStatus);
 
 app.use("/pokemon", pokemonsRouter);
-
-const pokemonController = new PokemonController(pokemons);
-
-app.delete("/pokemon/:pokemonId", pokemonController.deletePokemon);
 
 app.use(handlerEndpointNotFound);
 
