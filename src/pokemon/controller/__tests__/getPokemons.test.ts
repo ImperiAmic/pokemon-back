@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { fixturePokemons, mewtwo, pikachu } from "../../fixtures.js";
 import PokemonController from "../PokemonController.js";
 
-describe("Given the getPokemon method from PokemonController class", () => {
+describe("Given the getPokemons method from PokemonController class", () => {
   describe("When it receives a request and a response", () => {
     const req = {} as Request;
     const res: Pick<Response, "status" | "json"> = {
